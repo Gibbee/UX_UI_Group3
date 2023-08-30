@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Digital Escape Home</title>
+		<link rel="stylesheet" href="https://use.typekit.net/byb6hzb.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="script.js"></script>
+		<script src="js/myscript.js"></script>
+
+	</head>
+	<body>
+
+		<!-- Header with Time display -->
+
+		<div class="time-container">
+			<p id="current-time">Loading...</p>
+		</div>
+		<header>
+			<h1>Customize Your Activities</h1>
+			<p>This is a paragraph.</p>
+		</header>
+
+
+		<!-- DropDown for Notification Options -->
+
+		<div class="dropdown-container">
+			<div class="dropdown">
+				<h3>Dropdown 1</h3>
+				<div class="checkbox-column">
+					<label><input type="checkbox" name="days" value="Sunday">Sunday</label>
+					<label><input type="checkbox" name="days" value="Monday">Monday</label>
+					<label><input type="checkbox" name="days" value="Tuesday">Tuesday</label>
+					<label><input type="checkbox" name="days" value="Wednesday">Wednesday</label>
+					<label><input type="checkbox" name="days" value="Thursday">Thursday</label>
+					<label><input type="checkbox" name="days" value="Friday">Friday</label>
+					<label><input type="checkbox" name="days" value="Saturday">Saturday</label>
+				</div>
+				<div class="time-column">
+					<div class="time-selector">
+						<input type="number" min="1" max="12" value="12" class="hour"> :
+						<input type="number" min="0" max="59" value="0" class="minute">
+						<button class="am-button">AM</button>
+						<button class="pm-button">PM</button>
+					</div>
+					<!-- Repeat for the rest of the days -->
+				</div>
+			</div>
+			<!-- Repeat for the other dropdowns -->
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	</body>
+</html>
