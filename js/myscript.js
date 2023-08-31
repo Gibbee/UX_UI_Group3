@@ -27,6 +27,10 @@ $(document).ready(function () {
 //checkboxes
 
 $(document).ready(function() {
+    $(".dropdown-button").click(function() {
+        $(this).siblings(".dropdown-content").toggle();
+    });
+
     $(".am-button").click(function() {
         $(this).addClass("selected");
         $(this).siblings(".pm-button").removeClass("selected");
