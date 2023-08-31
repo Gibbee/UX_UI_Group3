@@ -1,5 +1,4 @@
-//current time code
-
+// Clock update
 $(document).ready(function () {
     updateTime();
 
@@ -7,37 +6,50 @@ $(document).ready(function () {
         var currentTime = new Date();
         var hours = currentTime.getHours();
         var minutes = currentTime.getMinutes();
-        var seconds = currentTime.getSeconds();
-
         var ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12 || 12; // Convert to 12-hour format
+        hours = hours % 12 || 12;
 
-        var formattedTime = `${hours}:${padZero(minutes)}: ${ampm}`;
-
+        var formattedTime = `${hours}:${padZero(minutes)} ${ampm}`;
         $("#current-time").text(formattedTime);
 
-        setTimeout(updateTime, 1000); // Update every second
+        setTimeout(updateTime, 1000);
     }
 
     function padZero(number) {
         return (number < 10 ? '0' : '') + number;
     }
-});
 
-//checkboxes
-
-$(document).ready(function() {
-    $(".dropdown-button").click(function() {
+    // Dropdown and AM/PM button functionality
+    $(".dropdown-button").click(function () {
         $(this).siblings(".dropdown-content").toggle();
     });
 
-    $(".am-button").click(function() {
+    $(".am-button").click(function () {
         $(this).addClass("selected");
         $(this).siblings(".pm-button").removeClass("selected");
     });
 
-    $(".pm-button").click(function() {
+    $(".pm-button").click(function () {
         $(this).addClass("selected");
         $(this).siblings(".am-button").removeClass("selected");
+    });
+
+    // Initialize flatpickr for time picker
+    flatpickr("#timepicker", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "h:i",
+        time_24hr: false
+    });
+
+    // Handle AM/PM buttons outside the modal
+    $(".am-button").click(function () {
+        $(this).addClass("selected");
+        $(".pm-button").removeClass("selected");
+    });
+
+    $(".pm-button").click(function () {
+        $(this).addClass("selected");
+        $(".am-button").removeClass("selected");
     });
 });
