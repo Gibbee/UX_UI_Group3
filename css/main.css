@@ -10,6 +10,16 @@ body {
 	margin: 0;
 }
 
+
+
+hr {
+	border: none;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	/* White color with 50% opacity */
+	margin: 10px 0;
+	/* Adjust margin as needed */
+}
+
 header {
 	margin-bottom: 40px;
 }
@@ -25,10 +35,11 @@ h1 {
 /* Apple Phone top mimic */
 
 .time-container {
-	height: 40px;
+	height: 60px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: .75em;
 }
 
 .time-container p {
@@ -51,15 +62,25 @@ i {
 }
 
 .dropdown-container {
-	display: flex;
+	display: inline-flex;
+	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
+	width: 393px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .dropdown button {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	background: #8489B4;
 	height: 44px;
+	margin-bottom: 4px;
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+button:focus {
+	outline: None;
 }
 
 .dropdown {
@@ -107,6 +128,7 @@ input[type=checkbox] {
 	margin-right: 13px;
 	width: 20px;
 	height: 20px;
+	accent-color: #4f5571;
 }
 
 label {
@@ -121,11 +143,12 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 }
 
 .checkbox-column {
-	width: 40%;
+	width: 45%;
 	display: flex;
 	flex-direction: column;
-	gap: 18px;
+	gap: 22px;
 	padding-top: 11px;
+	padding-left: 10px;
 }
 
 .checkbox-column h3 {
@@ -149,11 +172,12 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 12px;
+	gap: 7px;
 	background: #5E6284;
-	width: 48%;
+	width: 46%;
 	padding-bottom: 20px;
 	padding-top: 10px;
+	padding-right: 14px;
 }
 
 
@@ -227,4 +251,145 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 
 .flatpickr-calendar.animate.open {
 	width: 100px;
+}
+
+.activities {
+	display: inline-flex;
+	justify-content: right;
+	position: relative;
+	left: -48px;
+}
+
+.detox-activities {
+	display: contents !important;
+}
+
+.activities-column {
+	width: 96% !important;
+	padding-left: 20px;
+	gap: 9px;
+}
+
+.activities-button {
+	width: 350px;
+}
+
+.activities-column-main {
+	width: 80%;
+	gap: 8px;
+	margin-right: 0px !important;
+}
+
+.activities-row {
+	justify-content: flex-end !important;
+}
+
+.activites-dropdown {
+	gap: 16px;
+}
+
+.sublist {
+	margin-left: 40px;
+}
+
+.sub-checkbox:disabled,
+.sub-checkbox:disabled+label {
+	opacity: 0.4;
+}
+
+/* Bottom Toggle */
+
+.toggle {
+	position: relative;
+	width: 180px;
+	height: 36px;
+	background-color: #8185AA;
+	border-radius: 18px;
+	overflow: hidden;
+}
+
+.toggle-label {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	transition: transform 0.3s, background-color 0.3s;
+	transform: translateX(0);
+}
+
+.toggle-circle {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 30px;
+	height: 30px;
+	background-color: #8489B4;
+	border-radius: 50%;
+	transition: transform 0.3s, background-color 0.3s;
+	cursor: pointer;
+}
+
+.toggle-input:checked+.toggle-label {
+	transform: translateX(100%);
+	background-color: #4f5571;
+}
+
+.toggle-input:checked+.toggle-label+.toggle-circle {
+	transform: translateX(143px);
+	/* Adjust this value as needed */
+	background-color: #5E6284;
+}
+
+.on-off-toggle {
+	height: 160px;
+	display: inline-flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.on-off-toggle h4 {
+	font-family: canada-type-gibson, sans-serif !important;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 22px !important;
+}
+
+/* Apple Footer Mimic */
+.apple-footer {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.home-button {
+	padding: 8px;
+	display: flex;
+}
+
+.dashboard {
+	padding-bottom: 24px;
+}
+
+.apple-footer a {
+	color: white;
+}
+
+/* Dashboard specific Code */
+.dashboard {
+	background-color: #308197 !important;
+}
+
+.dashboard-content h3 {
+	font-family: canada-type-gibson, sans-serif !important;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 22px !important;
+	padding: 20px;
+}
+
+.started-activity {
+	background-color: #266C7E;
 }

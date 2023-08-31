@@ -53,3 +53,20 @@ $(document).ready(function () {
         $(".am-button").removeClass("selected");
     });
 });
+
+const toggleInput = document.getElementById("toggle-checkbox");
+const toggleCircle = document.querySelector(".toggle-circle");
+
+toggleCircle.addEventListener("click", () => {
+  toggleInput.checked = !toggleInput.checked;
+  toggleInput.dispatchEvent(new Event("change"));
+});
+
+toggleInput.addEventListener("change", () => {
+  const isChecked = toggleInput.checked;
+  if (isChecked) {
+    toggleCircle.style.backgroundColor = "#4f5571";
+  } else {
+    toggleCircle.style.backgroundColor = "#E1E4F";
+  }
+});

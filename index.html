@@ -10,80 +10,289 @@
 
 	</head>
 	<body>
-		<div class="container mt-5">
+		<div class="container">
 			<div class="time-container">
 				<div class="row">
-					<div class="col-md-6 text-center clock">
+					<div class="text-center clock">
 						<p id="current-time">...</p>
 					</div>
-					<div class="col-md-6 text-center phone">
+					<div class="text-center phone">
 						<img src="images/Group 52.png">
 					</div>
 				</div>
 			</div>
-			<hr>
-			<header>
-				<h1>Customize Your<br>Activities</h1>
-			</header>
-			<div class="dropdown-container">
-				<div class="dropdown">
-					<button class="dropdown-button">Dropdown 1 <i class="fa fa-angle-right"></i></button>
-					<div class="dropdown-content">
-						<div class="row">
-							<div class="checkbox-column">
-								<h3>Day of the Week</h3>
-								<label><input type="checkbox" name="days" value="Sunday">Sunday</label>
-								<label><input type="checkbox" name="days" value="Monday">Monday</label>
-								<label><input type="checkbox" name="days" value="Tuesday">Tuesday</label>
-								<label><input type="checkbox" name="days" value="Wednesday">Wednesday</label>
-								<label><input type="checkbox" name="days" value="Thursday">Thursday</label>
-								<label><input type="checkbox" name="days" value="Friday">Friday</label>
-								<label><input type="checkbox" name="days" value="Saturday">Saturday</label>
+		</div>
+		<hr>
+		<header>
+			<h1>Customize Your<br>Activities</h1>
+		</header>
+		<div class="dropdown-container">
+			<div class="dropdown">
+				<button class="dropdown-button">Notification Options <i class="fa fa-angle-right"></i></button>
+				<div class="dropdown-content">
+					<div class="row">
+						<div class="checkbox-column">
+							<h3>Day of the Week</h3>
+							<label><input type="checkbox" name="days" value="Sunday">Sunday</label>
+							<label><input type="checkbox" name="days" value="Monday">Monday</label>
+							<label><input type="checkbox" name="days" value="Tuesday">Tuesday</label>
+							<label><input type="checkbox" name="days" value="Wednesday">Wednesday</label>
+							<label><input type="checkbox" name="days" value="Thursday">Thursday</label>
+							<label><input type="checkbox" name="days" value="Friday">Friday</label>
+							<label><input type="checkbox" name="days" value="Saturday">Saturday</label>
+						</div>
+						<div class="time-column">
+							<h3>Time of Day</h3>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
 							</div>
-							<div class="time-column">
-								<h3>Time of Day</h3>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="time-selector">
+								<input type="text" id="timepicker" placeholder="12:00" class="form-control">
+								<button class="am-button btn btn-light">AM</button>
+								<button class="pm-button btn btn-light">PM</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown activities-dropdown-main">
+				<button class="dropdown-button">Detox Activities <i class="fa fa-angle-right"></i></button>
+				<div class="dropdown-content activities">
+					<div class="row detox-activities">
+						<div class="checkbox-column activities-column-main">
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Social Activities <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content activities-content">
+									<div class="row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Family game night</label>
+											<label><input type="checkbox" name="days" value="Monday">find a friend - Have a picnic</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Escape room</label>
+											<label><input type="checkbox" name="days" value="Wednesday">Friends wine tasting trip</label>
+											<label><input type="checkbox" name="days" value="Thursday">Visit a farmers market</label>
+											<label><input type="checkbox" name="days" value="Friday">Try a dance class</label>
+											<label><input type="checkbox" name="days" value="Saturday">Plan a potluck</label>
+										</div>
+									</div>
 								</div>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Scavenger Hunts <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content activities-content">
+									<div class="row activities-row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Random suggestions</label>
+											<label><input type="checkbox" name="days" value="Monday">Photography prompt hunt</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Food Adventure</label>
+										</div>
+									</div>
 								</div>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Nature Activities <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content activities-content">
+									<div class="row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Go for a hike</label>
+											<label><input type="checkbox" name="days" value="Monday">Find a new walking trail</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Walk the dog/cat</label>
+											<label><input type="checkbox" name="days" value="Wednesday">Go for a bike ride</label>
+										</div>
+									</div>
 								</div>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Date Night <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content activities-content">
+									<div class="row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Go out for dinner</label>
+											<label><input type="checkbox" name="days" value="Monday">Movie night</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Axe throwing</label>
+											<label><input type="checkbox" name="days" value="Wednesday">Make Pottery</label>
+										</div>
+									</div>
 								</div>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Family & Friends <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content activities-content">
+									<div class="row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Visit your parents</label>
+											<label><input type="checkbox" name="days" value="Monday">Visit Siblings</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Plan activities with niece/nephews</label>
+											<label><input type="checkbox" name="days" value="Wednesday">Visit grandparents</label>
+											<label><input type="checkbox" name="days" value="Thursday">Make plans with a friend</label>
+											<label><input type="checkbox" name="days" value="Friday">Plan a group activity</label>
+											<label><input type="checkbox" name="days" value="Saturday">Call a grandparent</label>
+										</div>
+									</div>
 								</div>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Physical Activities <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content">
+									<div class="row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Go for a walk</label>
+											<label><input type="checkbox" name="days" value="Monday">Get out a yoga mat and stretch</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Zumba</label>
+										</div>
+									</div>
 								</div>
-								<div class="time-selector">
-									<input type="text" id="timepicker" placeholder="12:00" class="form-control">
-									<button class="am-button btn btn-light">AM</button>
-									<button class="pm-button btn btn-light">PM</button>
+							</div>
+							<div class="dropdown activities-dropdown">
+								<button class="dropdown-button activities-button">Creative Activities <i class="fa fa-angle-right"></i></button>
+								<div class="dropdown-content">
+									<div class="row">
+										<div class="checkbox-column activities-column">
+											<label><input type="checkbox" name="days" value="Sunday">Paint a picture</label>
+											<label><input type="checkbox" name="days" value="Monday">Write a poem</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Draw what makes you happy</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Turn on music and dance</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Do a puzzle</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Make a collage</label>
+											<label><input type="checkbox" name="days" value="Tuesday">Bake a cake and decorate it!</label>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Other dropdowns here -->
 			</div>
+			<div class="dropdown activities-dropdown-main">
+				<button class="dropdown-button">Apple Options <i class="fa fa-angle-right"></i></button>
+				<div class="dropdown-content activities">
+					<div class="row detox-activities">
+						<div class="checkbox-column activities-column-main">
+							<div class="dropdown activities-dropdown">
+								<label>
+									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
+									Connect Apple Health Kit
+								</label>
+								<div class="dropdown activities-dropdown sublist">
+									<label>
+										<input type="checkbox" name="apple" value="Apple HR" class="sub-checkbox" disabled>
+										Heart rate
+									</label>
+									<label>
+										<input type="checkbox" name="apple" value="Apple Steps" class="sub-checkbox" disabled>
+										Steps
+									</label>
+									<label>
+										<input type="checkbox" name="apple" value="Apple Sleep" class="sub-checkbox" disabled>
+										Sleep Patterns
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown activities-dropdown-main">
+				<button class="dropdown-button">Dashboard Options <i class="fa fa-angle-right"></i></button>
+				<div class="dropdown-content activities">
+					<div class="row detox-activities">
+						<div class="checkbox-column activities-column-main">
+							<div class="dropdown activities-dropdown">
+								<label>
+									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
+									Next Activity
+								</label>
+								<label>
+									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
+									Past Activities
+								</label>
+								<p>Health Kit Views (if Active)</p>
+								<label>
+									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
+									Heart Rate
+								</label>
+								<label>
+									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
+									Steps
+								</label>
+								<label>
+									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
+									Sleep Pattern
+								</label>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<hr>
+			</div>
+			<div class="container on-off-toggle">
+				<div class="row">
+					<h4>Turn On/Off App Activities</h4>
+					<div class="toggle app-activities-on-off">
+						<input type="checkbox" class="toggle-input" id="toggle-checkbox" style="display: none;">
+						<label class="toggle-label" for="toggle-checkbox"></label>
+						<div class="toggle-circle"></div>
+					</div>
+				</div>
+
+			</div>
+			<div>
+				<hr>
+			</div>
+			<footer>
+				<div class="container ">
+					<div class="row apple-footer">
+						<a href="dashboard.html">
+							<div class="home-button">
+								<img src="images/Vector.png">
+							</div>
+							<div class="dashboard">
+
+								Dashboard
+
+							</div>
+						</a>
+					</div>
+				</div>
+			</footer>
+
+
+
 		</div>
+
+		</div>
+
+
+
 		<div class="modal fade" id="timePickerModal" tabindex="-1" aria-labelledby="timePickerModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -100,6 +309,21 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			const connectAppleCheckbox = document.getElementById("connectAppleCheckbox");
+			const subCheckboxes = document.querySelectorAll(".sub-checkbox");
+
+			connectAppleCheckbox.addEventListener("change", function () {
+				const isConnectAppleChecked = this.checked;
+
+				subCheckboxes.forEach(checkbox => {
+					checkbox.disabled = !isConnectAppleChecked;
+					if (!isConnectAppleChecked) {
+						checkbox.checked = false;
+					}
+				});
+			});
+		</script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
