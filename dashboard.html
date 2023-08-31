@@ -28,87 +28,116 @@
 		</header>
 		<div class="dropdown-container">
 			<div class="dropdown dashboard-content">
-				<h3>Day of the Week</h3>
+				<h3>Upcoming Activity</h3>
+				<div>
+					<hr>
+				</div>
 				<div class="row">
 					<div class="started-activity">
-						<p>Take your cat for a walk</p>
+						<div class="message">
+							<p>Take your cat for a walk</p>
+						</div>
+						<div class="open-final-modal">
+							<button id="openModal">Start Activity</button>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="dropdown dashboard-content">
+					<h3>Past Activities</h3>
+					<div>
+						<hr>
+					</div>
+					<div class="row past-activities">
+						<div class="past-activities-block">
+							<button class="heart-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+							<p>Take your cat for a walk</p>
+						</div>
+						<div class="past-activities-block">
+							<button class="heart-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+							<p>Take your cat for a walk</p>
+						</div>
+						<div class="past-activities-block">
+							<button class="heart-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+							<p>Take your cat for a walk</p>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown dashboard-content">
+					<h3>Apple Health Kit</h3>
+					<div>
+						<hr>
+					</div>
+					<div class="row apple-kit">
+						<a href="index.html">Click Here to Link Apple</a>
+					</div>
+				</div>
 
-			<div class="dropdown activities-dropdown-main">
-				<button class="dropdown-button">Apple Options <i class="fa fa-angle-right"></i></button>
-				<div class="dropdown-content activities">
-					<div class="row detox-activities">
-						<div class="checkbox-column activities-column-main">
-							<div class="dropdown activities-dropdown">
-								<label>
-									<input type="checkbox" name="apple connect" value="Connect Apple" id="connectAppleCheckbox">
-									Connect Apple Health Kit
-								</label>
-								<div class="dropdown activities-dropdown sublist">
-									<label>
-										<input type="checkbox" name="apple" value="Apple HR" class="sub-checkbox" disabled>
-										Heart rate
-									</label>
-									<label>
-										<input type="checkbox" name="apple" value="Apple Steps" class="sub-checkbox" disabled>
-										Steps
-									</label>
-									<label>
-										<input type="checkbox" name="apple" value="Apple Sleep" class="sub-checkbox" disabled>
-										Sleep Patterns
-									</label>
+				<div class="container customize">
+					<div class="row">
+						<button><a href="index.html">Customize Options</a></button>
+					</div>
+
+				</div>
+				<div>
+					<hr>
+				</div>
+				<footer>
+					<div class="container ">
+						<div class="row apple-footer">
+							<a href="dashboard.html">
+								<div class="home-button">
+									<img src="images/Vector.png">
 								</div>
-							</div>
+								<div class="dashboard">
+									Dashboard
+								</div>
+							</a>
+						</div>
+					</div>
+				</footer>
+
+
+
+			</div>
+
+		</div>
+		<div class="modal-group">
+			<div id="modal1" class="modal">
+				<div class="modal-content modal-notice1">
+					<div class="modal-info">
+						<div class="all-content">
+							<h2>Today's Activity</h2>
+							<p>Take the cat for a walk</p>
+							<button id="notToday">Not Today</button>
+							<button id="start">Start</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="dropdown activities-dropdown-main">
-				<button class="dropdown-button">Apple Health kit</button>
-				<div class="dropdown-content activities">
-					<div class="row detox-activities">
-						<div class="checkbox-column activities-column-main">
-							<a href="index.html">Click here to Link Apple</a>
-						</div>
+
+			<div id="modal2" class="modal">
+				<div class="modal-content">
+					<h2>Let's Go</h2>
+					<p>Take the cat for a walk</p>
+					<button id="imDone">I'm Done</button>
+				</div>
+			</div>
+
+			<div id="modal3" class="modal">
+				<div class="modal-content">
+					<h2>Congrats</h2>
+					<p>You took your cat for a walk</p>
+					<button id="closeModal">✓</button>
+					<div class="fireworks-container">
+						<div class="fireworks"></div>
+						<div class="firework" style="animation-delay: 0s;"></div>
+						<div class="firework" style="animation-delay: 0.5s;"></div>
+						<div class="firework" style="animation-delay: 1s;"></div>
+						<div class="firework" style="animation-delay: 1.5s;"></div>
 					</div>
 				</div>
 			</div>
-			<div>
-				<hr>
-			</div>
-			<div class="container on-off-toggle">
-				<div class="row">
-					<button><a href="index.html">Customize Options</a></button>
-				</div>
-
-			</div>
-			<div>
-				<hr>
-			</div>
-			<footer>
-				<div class="container ">
-					<div class="row apple-footer">
-						<a href="dashboard.html">
-							<div class="home-button">
-								<img src="images/Vector.png">
-							</div>
-							<div class="dashboard">
-								Dashboard
-							</div>
-						</a>
-					</div>
-				</div>
-			</footer>
-
-
-
 		</div>
-
-		</div>
-
-
 
 		<div class="modal fade" id="timePickerModal" tabindex="-1" aria-labelledby="timePickerModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
@@ -140,6 +169,94 @@
 					}
 				});
 			});
+		</script>
+		<script>
+			const openModalButton = document.getElementById("openModal");
+			const modal1 = document.getElementById("modal1");
+			const notTodayButton = document.getElementById("notToday");
+			const startButton = document.getElementById("start");
+			const modal2 = document.getElementById("modal2");
+			const imDoneButton = document.getElementById("imDone");
+			const modal3 = document.getElementById("modal3");
+			const closeModalButton = document.getElementById("closeModal");
+
+			openModalButton.addEventListener("click", () => {
+				modal1.style.display = "flex";
+			});
+
+			notTodayButton.addEventListener("click", () => {
+				modal1.style.display = "none";
+			});
+
+			startButton.addEventListener("click", () => {
+				modal1.style.display = "none";
+				modal2.style.display = "flex";
+			});
+
+			imDoneButton.addEventListener("click", () => {
+				modal2.style.display = "none";
+				modal3.style.display = "flex";
+				setTimeout(() => {
+					modal3.style.display = "none";
+				}, 3000);
+			});
+
+			closeModalButton.addEventListener("click", () => {
+				modal3.style.display = "none";
+			});
+		</script>
+		<script>
+			const heartButtons = document.querySelectorAll(".heart-button");
+
+			heartButtons.forEach(button => {
+				button.addEventListener("click", () => {
+					button.classList.toggle("clicked");
+				});
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const container = document.querySelector(".fireworks-container");
+
+				function createFirework() {
+					const firework = document.createElement("div");
+					firework.className = "firework";
+
+					const x = Math.random() * window.innerWidth;
+					const y = Math.random() * window.innerHeight;
+					const size = Math.random() * 10 + 4; // Random size between 4 and 14 pixels
+					const color = getRandomColor();
+					const delay = Math.random() * 2000;
+
+					firework.style.left = `${x}px`;
+					firework.style.top = `${y}px`;
+					firework.style.width = `${size}px`;
+					firework.style.height = `${size}px`;
+					firework.style.background = color;
+					firework.style.animationDelay = `${delay}ms`;
+
+					container.appendChild(firework);
+
+					setTimeout(() => {
+						firework.remove();
+					}, 2000);
+				}
+
+				function launchFireworks() {
+					setInterval(createFirework, 500);
+				}
+
+				launchFireworks();
+			});
+
+			function getRandomColor() {
+				const letters = "0123456789ABCDEF";
+				let color = "#";
+				for (let i = 0; i < 6; i++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
 		</script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

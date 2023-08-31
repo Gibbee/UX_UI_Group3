@@ -15,9 +15,7 @@ body {
 hr {
 	border: none;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
-	/* White color with 50% opacity */
-	margin: 10px 0;
-	/* Adjust margin as needed */
+	margin: 3px 0;
 }
 
 header {
@@ -66,12 +64,12 @@ i {
 	flex-direction: column;
 	justify-content: center;
 	width: 393px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 
 }
 
 .dropdown button {
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 	background: #8489B4;
 	height: 44px;
 	margin-bottom: 4px;
@@ -336,7 +334,6 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 
 .toggle-input:checked+.toggle-label+.toggle-circle {
 	transform: translateX(143px);
-	/* Adjust this value as needed */
 	background-color: #5E6284;
 }
 
@@ -367,6 +364,7 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 .home-button {
 	padding: 8px;
 	display: flex;
+	justify-content: center;
 }
 
 .dashboard {
@@ -377,9 +375,121 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	color: white;
 }
 
+/* Mass Modal styles */
+.message {
+	width: 50%;
+}
+
+.open-final-modal {
+	width: 50%;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	height: 100%;
+	background: none !important;
+}
+
+.modal-notice1 {
+	background: black;
+	opacity: 50%;
+}
+
+#openModal {
+	background-color: #155869;
+	border: none;
+	border-radius: 36px;
+	color: white;
+}
+
+.modal-info {
+	background: grey !important;
+}
+
+/* Fireworks animation */
+.fireworks-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.firework {
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	opacity: 1;
+	animation: explode 2s ease-in-out;
+}
+
+@keyframes explode {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+}
+
+/* Heart button */
+
+.heart-button {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.3s;
+}
+
+.heart-button i {
+	font-size: 24px;
+	color: #155869;
+	transition: color 0.3s;
+}
+
+.heart-button.clicked i {
+	color: white;
+}
+
+.heart-button {
+	background: none;
+	box-shadow: none;
+	padding: 6px;
+}
+
+.past-activities-block button {
+	background: none;
+	box-shadow: none;
+	text-align: right;
+}
+
 /* Dashboard specific Code */
 .dashboard {
 	background-color: #308197 !important;
+}
+
+.dashboard-content {
+	gap: 8px;
+	margin-top: 40px;
 }
 
 .dashboard-content h3 {
@@ -387,9 +497,56 @@ custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	font-weight: 200;
 	font-style: normal;
 	font-size: 22px !important;
-	padding: 20px;
+	padding: 0px 20px 0px 20px;
+	background: none !important;
 }
 
 .started-activity {
 	background-color: #266C7E;
+	width: 80%;
+	border-radius: 6px;
+	padding: 11px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 140px;
+}
+
+.past-activities-block {
+	background-color: #266C7E;
+	width: 26%;
+	height: 116px;
+	border-radius: 6px;
+	padding: 6px;
+	margin: 6px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+.past-activities-block p {
+	text-align: center;
+}
+
+.apple-kit {
+	height: 200px;
+}
+
+.apple-kit a {
+	color: white;
+	font-family: canada-type-gibson, sans-serif !important;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 22px !important;
+}
+
+.customize button {
+	background: #266C7E;
+	border: none;
+	border-radius: 36px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.customize button a {
+	color: white;
 }
